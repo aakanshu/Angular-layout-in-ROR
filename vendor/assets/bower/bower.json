@@ -1,0 +1,15 @@
+{
+  "name": "bower",
+  "authors": [
+    "aakanshu <aakanshu@chronuscorp.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular-ui-router": "^1.0.13",
+    "angular": "^1.6.8",
+    "jquery": "^3.3.1"
+  }
+}

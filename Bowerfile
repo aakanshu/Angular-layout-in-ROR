@@ -1,0 +1,5 @@
+assets_path "assets/bower"
+
+asset 'jquery', '~3.3.1'
+asset 'angular', '~1.6.8'
+asset 'angular-ui-router', '~1.0.13'
