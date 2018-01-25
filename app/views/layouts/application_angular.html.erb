@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="homer">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SampleApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= javascript_include_tag 'application_angular', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application_angular', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body ng-controller="appCtrl">
+      <ul class="nav nav-pills nav-wizard nav-justified">
+          <li ui-sref-active="active">
+            <a ui-sref="home"  data-toggle="tab">Start</a>
+            <div class="nav-arrow"></div>
+          </li>
+          <li ui-sref-active="active">
+            <div class="nav-wedge"></div>
+            <a ui-sref="about" data-toggle="tab">Step 1</a>
+            <div class="nav-arrow"></div>
+          </li>
+          </ul>
+
+    
+    <div id="uiRouterInfo">
+          $state = {{$state.current.name}}
+          $stateParams = {{$stateParams}}
+          $state full url = {{ $state.$current.url.source }}    
+    </div>
+      <ui-view></ui-view>
+      
+    <%= yield :layout %>
+  </body>
+</html>
